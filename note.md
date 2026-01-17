@@ -35,6 +35,7 @@ $\* all arguements as single string
 help test = all the requireed flags for conditional statements
 
 : = is just null command
+;; = for break ( similar to cpp break;)
 
 (()) = arithematic evaluation # check out help let
 [[]] = advanced conditional test # check out help test
