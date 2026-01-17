@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+foo() {
+	max=0
+	while read -r lines; do
+		echo "line no is $max and line is $lines"
+		((max++))
+	done
+}
+
+foo
