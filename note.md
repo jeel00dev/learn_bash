@@ -1,41 +1,76 @@
-">" = redirect output(overwrite)
-ex. echo "hello" > text.txt
+# Bash Quick Notes
 
-">>" = redirect output(append)
-ex. echo "hello" >> text.txt
+## Redirections
 
-type explains where a command comes from and what type of command it is.
-ex. type -a ls
+- `>`: Redirect output (overwrite)  
+  Example:
 
-env = prints all the environment variables
+  ```bash
+  echo "hello" > text.txt
+  ```
 
-help = for builtin tools && man for external tools
+- `>>`: Redirect output (append)  
+  Example:
+  ```bash
+  echo "hello" >> text.txt
+  ```
 
-file = what kind of file somthing is by examining it's contents.
+## Commands
 
-tr = translate
-ex. echo &PATH | tr : '\n' this will translate : to new line(\n)
+- `type`: Explains where a command comes from and what type of command it is.  
+  Example:
 
-hash = caches the full path of executalbes after they are run once in that
-terminal session.
+  ```bash
+  type -a ls
+  ```
 
-echo $? = exit code of last command that we run
+- `env`: Prints all the environment variables.
 
-bash -n (filename) = check for any syntax errors in (filename)
+- `help`: For builtin tools (use `man` for external tools).
 
-${!i} = for for loops iteration through all the arguements
-$0 is script or execute program name
-$1 is first arg and so on.
-$# number of arguements
-$@ all arguements as individual words
-$\* all arguements as single string
-($$) =process id of the script
-($?) = exit status
+- `file`: Determines what kind of file something is by examining its contents.
 
-help test = all the requireed flags for conditional statements
+- `tr`: Translate characters.  
+  Example:
 
-: = is just null command
-;; = for break ( similar to cpp break;)
+  ```bash
+  echo $PATH | tr : '\n'
+  ```
 
-(()) = arithematic evaluation # check out help let
-[[]] = advanced conditional test # check out help test
+  This translates `:` to a new line (`\n`).
+
+- `hash`: Caches the full path of executables after they are run once in that terminal session.
+
+- `echo $?`: Displays the exit code of the last command that was run.
+
+- `bash -n <filename>`: Checks for any syntax errors in `<filename>`.
+
+## Variables and Parameters
+
+- `${!i}`: For loop iteration through all the arguments.
+
+- `$0`: Script or executable program name.
+
+- `$1`: First argument (and so on for `$2`, etc.).
+
+- `$#`: Number of arguments.
+
+- `$@`: All arguments as individual words.
+
+- `$*`: All arguments as a single string.
+
+- `$$`: Process ID of the script.
+
+- `$?`: Exit status.
+
+## Miscellaneous
+
+- `help test`: Shows all the required flags for conditional statements.
+
+- `:`: Null command.
+
+- `;;`: For breaking out (similar to C++ `break;`).
+
+- `(())`: Arithmetic evaluation (check `help let`).
+
+- `[[ ]]`: Advanced conditional test (check `help test`).
