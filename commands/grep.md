@@ -1,7 +1,7 @@
 ## Basic Syntax
 
 ```bash
-grep [OPTIONS] PATTERN FILE
+grep [OPTIONS]
 ```
 
 - **PATTERN**: The text or regex to search for (quote if it contains spaces or special chars).
@@ -96,3 +96,14 @@ grep -C 1 "error" app.log  # 1 line above and below
 ```bash
 grep -o "error" app.log
 ```
+
+```bash
+
+grep -Rnw cpp -e 'create_win'
+```
+
+- -R → recursive (search inside all subdirectories)
+- -n → show line number
+- -w → match the whole word create_win
+- cpp → directory to search in
+- -e 'create_win' → pattern to search

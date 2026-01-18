@@ -36,6 +36,7 @@ esac
 
 ```bash
 #!/usr/bin/env bash
+char="$1"
 case $char in
     [a-z])
         echo "Lowercase letter"

@@ -35,7 +35,7 @@ Redirection allows you to control where input comes from and where output goes. 
   ```
 - **Redirect stderr to stdout** (combine errors with normal output):
   ```bash
-  command 2>&1 > combined.txt  # stderr to stdout, then both to file
+  command 2>&1 > combined.txt  # stderr to stdout, then to stdout file
   ```
 
 ### 3. Redirecting stdin (0)
@@ -45,8 +45,16 @@ Redirection allows you to control where input comes from and where output goes. 
   grep "error" < app.log  # Input from file
   ```
 - **From heredoc** (inline input):
+
   ```bash
   cat << EOF
+  Line 1
+  Line 2
+  EOF
+  ```
+
+  ```bash
+  cat << EOF >> redirect.txt
   Line 1
   Line 2
   EOF
