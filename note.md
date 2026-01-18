@@ -13,9 +13,23 @@
 
 - `>>`: Redirect output (append)  
   Example:
+
   ```bash
   echo "hello" >> text.txt
   ```
+
+- `>>>`: Redirect string output
+  | Operator | Input source | Typical use |
+  | -------- | --------------- | ----------------- |
+  | `<` | file | read file |
+  | `<<` | multi-line text | configs, scripts |
+  | `<<<` | single string | parsing variables |
+
+```
+  < file ───────▶ stdin
+  << text block ─▶ stdin
+  <<< string ─────▶ stdin
+```
 
 ## Commands
 
