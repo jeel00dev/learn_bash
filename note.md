@@ -2,6 +2,8 @@
 
 ## Redirections
 
+- `ls -li`: For inode Numbers
+
 - `>`: Redirect output (overwrite)  
   Example:
 
